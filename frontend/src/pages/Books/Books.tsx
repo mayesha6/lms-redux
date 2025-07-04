@@ -8,12 +8,12 @@ const Books = () => {
   const [page, setPage] = useState(1);
   const limit = 8;
 
-  const { data, isLoading } = useGetBooksQuery({page, limit});
+  const { data, isLoading } = useGetBooksQuery({ page, limit });
 
   if (isLoading) {
     return <p>Loading...</p>;
   }
-  
+
   return (
     <div className="container mx-auto px-3 mt-10">
       <h2 className="pb-20 text-center font-bold text-3xl capitalize">Books</h2>
@@ -31,7 +31,7 @@ const Books = () => {
         >
           Prev
         </Button>
-        
+
         <Button
           variant="outline"
           disabled={page === data?.meta?.totalPages}

@@ -25,12 +25,29 @@ const BookCard = ({ book }: IProps) => {
       <div className="">
         <div className="border px-5 py-4 rounded-md flex flex-col justify-between ">
           <div className="">
-            <h2 className="capitalize font-semibold text-2xl pb-2">{book.title}</h2>
-            <p className="capitalize"><span className="font-semibold">author: </span>{book.author}</p>
-            <p className="capitalize"><span className="font-semibold">genre: </span>{book.genre}</p>
-            <p className="capitalize"><span className="font-semibold">isbn: </span>{book.isbn}</p>
-            <p className="capitalize"><span className="font-semibold">copies: </span>{book.copies}</p>
-            <p className="capitalize"><span className="font-semibold">availability: </span>{book.available}</p>
+            <h2 className="capitalize font-semibold text-2xl pb-2">
+              {book.title}
+            </h2>
+            <p className="capitalize">
+              <span className="font-semibold">author: </span>
+              {book.author}
+            </p>
+            <p className="capitalize">
+              <span className="font-semibold">genre: </span>
+              {book.genre}
+            </p>
+            <p className="capitalize">
+              <span className="font-semibold">isbn: </span>
+              {book.isbn}
+            </p>
+            <p className="capitalize">
+              <span className="font-semibold">copies: </span>
+              {book.copies}
+            </p>
+            <p className="capitalize">
+              <span className="font-semibold">availability: </span>
+              {book.available}
+            </p>
           </div>
           <div className="flex items-center justify-between pt-3">
             <Button
@@ -62,7 +79,7 @@ const BookCard = ({ book }: IProps) => {
                 Unavailable
               </Button>
             ) : (
-              <BorrowBookModal bookId={book._id} copies={book.copies}/>
+              <BorrowBookModal bookId={book._id} copies={book.copies} />
             )}
           </div>
         </div>

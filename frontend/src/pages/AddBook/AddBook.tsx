@@ -48,8 +48,9 @@ const AddBook = () => {
 
   return (
     <div className="container mx-auto px-3">
-      
-        <h2 className="mt-14 text-center font-bold text-3xl capitalize">Add Book</h2>
+      <h2 className="mt-14 text-center font-bold text-3xl capitalize">
+        Add Book
+      </h2>
       <div className="px-6 py-8 my-14 max-w-2xl border-2 mx-auto rounded-md">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
