@@ -1,69 +1,52 @@
-# React + TypeScript + Vite
+# **Frontend - Library Management System**  
+This is the frontend for the Library Management System.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technology
+* React
+* Vite
+* TypeScript
+* Redux Toolkit (RTK Query)
+* Tailwind CSS
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Frontend Setup Instructions
+1. Create and Open Project
+    * Create a folder named LIBRARYMANAGEMENT
+    * Open folder in VS Code
+    * Open the terminal
+2. Initialize and Install Dependencies
+    * Initialize the project
+    * Install required packages: 
+        * react-router
+        * @reduxjs/toolkit
+        * react-redux
+        * lucide-react
+        * tailwindcss/vite
+    * Install development tools:
+        * vite
+        * typescript
+    * Configure Tailwind CSS
+3. Create Environment File (.env)
+    * VITE_API_BASE_URL=http://localhost:5000/api
+4. Connect Base API in Code
+    * baseUrl: import.meta.env.VITE_API_BASE_URL
+5. Run the App
+6. Create Folder Structure  
+      Inside the src folder, create:  
+      src/  
+      ├── assets/  
+      ├── components/  
+      │   ├── ui/  
+      │   ├── theme/  
+      │   └── module/  
+      ├── layout/  
+      ├── provider/  
+      ├── routes/  
+      ├── redux/  
+      │   ├── api/  
+      │   ├── hook.ts    
+      │   └── store.ts  
+      ├── pages/  
+      ├── .env  
+      ├── types.ts  
+      ├── App.tsx  
+      └── main.tsx  
