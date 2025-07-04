@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/server.js",
-    "start:prod": "nodemon ./dist/server.js",
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
+    "start": "node init && node ./dist/server.js",
+    "start:prod": "node init && nodemon ./dist/server.js",
+    "dev": "node init && ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "node init && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
